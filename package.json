@@ -1,0 +1,27 @@
+{
+  "name": "buefy-calendar-component",
+  "version": "1.0.0",
+  "description": "Calendar component for Vue Bulma",
+  "main": "src/Calendar.vue",
+  "peerDependencies": {
+    "bulma": ">=0.3",
+    "vue": ">=2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesheps/buefy-calendar.git"
+  },
+  "keywords": [
+    "vue",
+    "bulma",
+    "vue-bulma",
+    "vue-bulma-component",
+    "vue-bulma-calendar",
+    "calendar"
+  ],
+  "author": "Riley Johnson <riley@rileyjohnson.org>",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}
