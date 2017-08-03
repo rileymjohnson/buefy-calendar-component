@@ -1,12 +1,12 @@
-# Switch
+# Calendar
 
-Switch component for Vue Bulma.
+Calendar component for Vue Bulma.
 
 
 ## Installation
 
 ```
-$ npm install vue-bulma-switch --save
+$ npm install git+https://github.com/rileymjohnson/buefy-calendar-component.git --save
 ```
 
 
@@ -14,51 +14,26 @@ $ npm install vue-bulma-switch --save
 
 ```vue
 <template>
-  <div>
-    <p>
-      <vb-switch type="success" size="large" checked v-model="value"></vb-switch>
-    </p>
-    <p>
-      {{ text }}
-    </p>
-  </div>
+    <calendar :events="events"></calendar>
 </template>
 
 <script>
-// do not use below code, because `Switch` is svg tag.
-// import Switch from 'vue-bulma-switch'
-import VbSwitch from 'vue-bulma-switch'
+import Calendar from 'buefy-calendar-component'
 
 export default {
+  name: 'app',
   components: {
-    VbSwitch
+    'calendar': Calendar
   },
-
-  data () {
-    return {
-      value: false,
-      text: ''
-    }
-  },
-
-  watch: {
-    value (val) {
-      this.text = val ? 'Right' : 'Wrong'
-    }
+  data() {
+      return {
+          events: {
+              "2017-08-02": [
+                  { title: "Rehearsal", url: "http://www.google.com" }
+              ]
+          }
+      }
   }
 }
 </script>
 ```
-
-
-## Badges
-
-![](https://img.shields.io/badge/license-MIT-blue.svg)
-![](https://img.shields.io/badge/status-stable-green.svg)
-
----
-
-> [fundon.me](https://fundon.me) &nbsp;&middot;&nbsp;
-> GitHub [@fundon](https://github.com/fundon) &nbsp;&middot;&nbsp;
-> Twitter [@_fundon](https://twitter.com/_fundon)
-
